@@ -1,0 +1,120 @@
+import {
+  RemadeInfo,
+  RemadeTableInfo,
+} from '@/__private__/storybook/components/RemadeInfo/RemadeInfo'
+import { ReactBigCalendarAdapterDoubled } from './examples/ReactBigCalendarAdapterDoubled/ReactBigCalendarAdapterDoubled'
+import { ReactBigCalendarAdapterSliced } from './examples/ReactBigCalendarAdapterSliced/ReactBigCalendarAdapterSliced'
+
+# reactBigCalendarAdapter
+
+```tsx
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter'
+```
+
+Этот адаптер стилизует календарь [react-big-calendar](https://jquense.github.io/react-big-calendar/examples/?path=/docs/about-big-calendar--page) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/)
+
+- [Границы](#границы)
+- [Разграничительные линии](#разграничительные-линии)
+- [Список свойств](#свойства)
+- [Пример использования](#пример)
+
+## Границы
+
+Чтобы сделать граицы календаря и ячеек жирнее необходимо указать флаг `doubled` в значение `true`.
+
+```tsx
+import React from 'react'
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter'
+import moment from 'moment'
+import { momentLocalizer, Calendar } from 'react-big-calendar'
+
+moment.locale('ru')
+const localizer = momentLocalizer(moment)
+
+export const ReactBigCalendarAdapterDoubled = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({ doubled: true })
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      defaultView="month"
+      {...otherProps}
+    />
+  )
+}
+```
+
+<ReactBigCalendarAdapterDoubled />
+
+## Разграничительные линии
+
+Для отображения разграничительных линий в ячеке необходимо указать флаг `sliced` в значение `true` (работает только при `view="month"`).
+
+```tsx
+import React from 'react'
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter'
+import moment from 'moment'
+import { momentLocalizer, Calendar } from 'react-big-calendar'
+
+moment.locale('ru')
+const localizer = momentLocalizer(moment)
+
+export const ReactBigCalendarAdapterSliced = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({ sliced: true })
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      defaultView="month"
+      {...otherProps}
+    />
+  )
+}
+```
+
+<ReactBigCalendarAdapterSliced />
+
+## Свойства
+
+<RemadeTableInfo url="https://jquense.github.io/react-big-calendar/examples/?path=/docs/about-big-calendar--page" />
+
+| Параметры                             | Тип       | По умолчанию | Описание                |
+| ------------------------------------- | --------- | ------------ | ----------------------- |
+| [`doubled?`](#границы)                | `doubled` | -            | Жирные границы          |
+| [`sliced?`](#разграничительные-линии) | `sliced`  | -            | Разграничительные линии |
+| `className?`                          | `string`  | -            | Класс                   |
+
+## Пример
+
+```tsx
+import React from 'react'
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter'
+import moment from 'moment'
+import { momentLocalizer, Calendar } from 'react-big-calendar'
+
+moment.locale('ru')
+const localizer = momentLocalizer(moment)
+
+export const ReactBigCalendarAdapterExample = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({ sliced: true })
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      showMultiDayTimes
+      defaultView="month"
+      popup
+      {...otherProps}
+    />
+  )
+}
+```

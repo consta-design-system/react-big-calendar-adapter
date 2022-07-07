@@ -75,7 +75,8 @@
     "@consta/uikit": ">= 3.9.3"
   },
   "dependencies": {
-    "@bem-react/classname": "^1.5.8"
+    "@bem-react/classname": "^1.5.8",
+    "react-big-calendar": "^0.40.4"
   },
   "resolutions": {
     "@types/react": "16.9.34",
@@ -108,6 +109,7 @@
     "@testing-library/react": "10.4.9",
     "@types/classnames": "2.2.9",
     "@types/react": "16.9.34",
+    "@types/react-big-calendar": "^0.38.1",
     "@types/react-dom": "16.9.7",
     "@types/react-test-renderer": "16.9.2",
     "babel-loader": "8.0.6",
@@ -122,6 +124,7 @@
     "husky": "3.0.0",
     "install-peers-cli": "https://github.com/evless/install-peers-cli#fix-yarn-policies",
     "mockdate": "2.0.5",
+    "moment": "^2.29.3",
     "npm-run-all": "4.1.5",
     "postcss": "7.0.32",
     "postcss-cli": "7.1.1",
