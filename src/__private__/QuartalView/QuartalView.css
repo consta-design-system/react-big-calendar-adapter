@@ -9,11 +9,11 @@
     box-sizing: border-box;
     width: 100%;
 
-    border: var(--calendar-border-widht) solid var(--color-bg-border);
-    border-bottom-width: calc(var(--calendar-border-widht) * 2);
+    border: var(--calendar-border-width) solid var(--color-bg-border);
+    border-bottom-width: calc(var(--calendar-border-width) * 2);
 
     & > *:not(:last-child) {
-      border-right: var(--calendar-border-widht) solid var(--color-bg-border);
+      border-right: var(--calendar-border-width) solid var(--color-bg-border);
     }
   }
 
@@ -38,15 +38,15 @@
 
     text-transform: capitalize;
 
-    border-right: var(--calendar-border-widht) solid var(--color-bg-border);
-    border-left: var(--calendar-border-widht) solid var(--color-bg-border);
+    border-right: var(--calendar-border-width) solid var(--color-bg-border);
+    border-left: var(--calendar-border-width) solid var(--color-bg-border);
     background: var(--color-bg-secondary);
   }
 
   &-Calendar {
     width: 100%;
 
-    border-top: var(--calendar-border-widht) solid var(--color-bg-border);
+    border-top: var(--calendar-border-width) solid var(--color-bg-border);
 
     & .rbc-month-header.rbc-row {
       display: none;

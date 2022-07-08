@@ -2,7 +2,16 @@ import { cn } from '../utils/bem'
 import { Result, Params } from './types'
 import { QuartalView } from '../QuartalView/QuartalView'
 import './ReactBigCalendarAdapter.css'
-import { dayFormat, monthFormat, weekFormat, WEEK_DAYS } from './helpert'
+import {
+  getDayFormat,
+  getShowMoreMessage,
+  getTimeRangeEvent,
+  getMonthFormat,
+  getWeekFormat,
+  WEEK_DAYS,
+  getHoursFormat,
+  getWeekDayFormat,
+} from './helpers'
 
 const cnReactBigCalendarAdapter = cn('ReactBigCalendarAdapter')
 
@@ -24,6 +33,7 @@ export const reactBigCalendarAdapter = (params: Params): Result => {
       day: 'День',
       agenda: 'Квартал',
       today: 'Сегодня',
+      showMore: getShowMoreMessage,
     },
     views: {
       month: true,
@@ -32,11 +42,15 @@ export const reactBigCalendarAdapter = (params: Params): Result => {
       agenda: QuartalView,
     },
     formats: {
-      dayHeaderFormat: date => dayFormat(date),
-      dayRangeHeaderFormat: date => weekFormat(date.start, date.end),
-      monthHeaderFormat: date => monthFormat(date),
-      dayFormat: date => WEEK_DAYS[date.getDay() === 0 ? 6 : date.getDay() - 1],
+      dayHeaderFormat: date => getDayFormat(date),
+      dayRangeHeaderFormat: date => getWeekFormat(date.start, date.end),
+      monthHeaderFormat: date => getMonthFormat(date),
+      dayFormat: getWeekDayFormat,
       weekdayFormat: date => WEEK_DAYS[date.getDay() === 0 ? 6 : date.getDay() - 1],
+      eventTimeRangeFormat: ({ start, end }) => getTimeRangeEvent(start, end),
+      eventTimeRangeEndFormat: ({ start, end }) => getTimeRangeEvent(start, end),
+      eventTimeRangeStartFormat: ({ start, end }) => getTimeRangeEvent(start, end),
+      timeGutterFormat: date => getHoursFormat(date),
     },
     step: 30,
   }

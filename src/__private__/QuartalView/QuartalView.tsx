@@ -5,7 +5,7 @@ import { Text } from '@consta/uikit/Text'
 import { cn } from '../utils/bem'
 
 import './QuartalView.css'
-import { WEEK_DAYS } from '../ReactBigCalendarAdapter/helpert'
+import { WEEK_DAYS } from '../ReactBigCalendarAdapter/helpers'
 import { DefaultLocalizerType } from '../ReactBigCalendarAdapter/types'
 import { reactBigCalendarAdapter } from '../ReactBigCalendarAdapter/reactBigCalendarAdapter'
 
