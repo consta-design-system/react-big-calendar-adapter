@@ -1,5 +1,5 @@
 {
-  "name": "@consta/react-bi-calendar-adapter",
+  "name": "@consta/react-big-calendar-adapter",
   "version": "0.0.1",
   "scripts": {
     "build:css": "NODE_ENV=production postcss 'src/**/*.css' --base src --dir lib",
