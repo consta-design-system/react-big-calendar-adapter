@@ -1,7 +1,3 @@
-import {
-  RemadeInfo,
-  RemadeTableInfo,
-} from '@/__private__/storybook/components/RemadeInfo/RemadeInfo'
 import { ReactBigCalendarAdapterDoubled } from './examples/ReactBigCalendarAdapterDoubled/ReactBigCalendarAdapterDoubled'
 import { ReactBigCalendarAdapterSliced } from './examples/ReactBigCalendarAdapterSliced/ReactBigCalendarAdapterSliced'
 
@@ -11,7 +7,8 @@ import { ReactBigCalendarAdapterSliced } from './examples/ReactBigCalendarAdapte
 import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter'
 ```
 
-Этот адаптер стилизует календарь [react-big-calendar](https://jquense.github.io/react-big-calendar/examples/?path=/docs/about-big-calendar--page) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/)
+Этот адаптер стилизует календарь [react-big-calendar](https://jquense.github.io/react-big-calendar/examples/?path=/docs/about-big-calendar--page) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Кроме стилей, адаптер добавляет в календарь перевод на русский и возможность посмотреть события за квартал.
 
 - [Границы](#границы)
 - [Разграничительные линии](#разграничительные-линии)
@@ -20,7 +17,7 @@ import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCale
 
 ## Границы
 
-Чтобы сделать граицы календаря и ячеек жирнее необходимо указать флаг `doubled` в значение `true`.
+Чтобы сделать границы ячеек в календаре толще, добавьте флаг `doubled` в значении `true`.
 
 ```tsx
 import React from 'react'
@@ -51,7 +48,10 @@ export const ReactBigCalendarAdapterDoubled = () => {
 
 ## Разграничительные линии
 
-Для отображения разграничительных линий в ячеке необходимо указать флаг `sliced` в значение `true` (работает только при `view="month"`).
+При просмотре месяца можно показать в ячейках дополнительные
+горизонтальные линии — чтобы проще было понять, к какой части дня
+относится событие. Чтобы показать разграничительные линии,
+добавьте флаг `sliced` в значении `true` (работает только при `view="month"`).
 
 ```tsx
 import React from 'react'
@@ -80,15 +80,13 @@ export const ReactBigCalendarAdapterSliced = () => {
 
 <ReactBigCalendarAdapterSliced />
 
-## Свойства
+## Свойства адаптера
 
-<RemadeTableInfo url="https://jquense.github.io/react-big-calendar/examples/?path=/docs/about-big-calendar--page" />
-
-| Параметры                             | Тип       | По умолчанию | Описание                |
-| ------------------------------------- | --------- | ------------ | ----------------------- |
-| [`doubled?`](#границы)                | `doubled` | -            | Жирные границы          |
-| [`sliced?`](#разграничительные-линии) | `sliced`  | -            | Разграничительные линии |
-| `className?`                          | `string`  | -            | Класс                   |
+| Параметры                             | Тип       | По умолчанию | Описание                                                |
+| ------------------------------------- | --------- | ------------ | ------------------------------------------------------- |
+| [`doubled?`](#границы)                | `doubled` | -            | Увеличенная толщина границ                              |
+| [`sliced?`](#разграничительные-линии) | `sliced`  | -            | Разграничительные линии внутри дня при просмотре месяца |
+| `className?`                          | `string`  | -            | Дополнительный CSS-класс                                |
 
 ## Пример
 
