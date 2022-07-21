@@ -12,7 +12,7 @@ on:
 env:
   BUILD_SCRIPT: yarn build:storybook
   BUILD_SCRIPT_OUTPUT: build
-  APP_NAME: rc-table-adapter
+  APP_NAME: react-big-calendar-adapter
 
 jobs:
   deploy:
