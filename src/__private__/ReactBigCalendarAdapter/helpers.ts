@@ -11,18 +11,18 @@ export const WEEK_DAYS = [
 export const WEEK_DAYS_SHORT = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 
 export const MONTHS_COUNTABLE = [
-  'Января',
-  'Февраля',
-  'Марта',
-  'Апреля',
-  'Мая',
-  'Июня',
-  'Июля',
-  'Августа',
-  'Сентября',
-  'Октября',
-  'Ноября',
-  'Декабря',
+  'января',
+  'февраля',
+  'марта',
+  'апреля',
+  'мая',
+  'июня',
+  'июля',
+  'августа',
+  'сентября',
+  'октября',
+  'ноября',
+  'декабря',
 ]
 
 export const MONTHS = [
@@ -78,15 +78,15 @@ export const getHoursFormat = (date: Date) => {
 export const getShowMoreMessage = (count: number): string => {
   const val = count % 10
   if ((val === 0 && val >= 5 && val <= 9) || (count > 10 && count < 20)) {
-    return `+ ${count} Событий`
+    return `+ ${count} событий`
   }
   if (val === 1) {
-    return `+ ${count} Событие`
+    return `+ ${count} событие`
   }
   if (val >= 2 && val <= 4) {
-    return `+ ${count} События`
+    return `+ ${count} события`
   }
-  return `+ ${count} Событий`
+  return `+ ${count} событий`
 }
 
 export const getTimeRangeEvent = (start: Date, end: Date) => {

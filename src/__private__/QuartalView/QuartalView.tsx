@@ -1,5 +1,12 @@
 import React, { useMemo } from 'react'
-import { TimeGridProps, Event, Navigate, DateLocalizer, Calendar } from 'react-big-calendar'
+import {
+  TimeGridProps,
+  Event,
+  Navigate,
+  DateLocalizer,
+  Calendar,
+  Messages,
+} from 'react-big-calendar'
 import moment from 'moment'
 import { Text } from '@consta/uikit/Text'
 import { cn } from '../utils/bem'
@@ -13,19 +20,18 @@ type Props<TEvent extends object = Event, TResource extends object = object> = {
   date: Date
   title: (date: Date) => string
   localizer: DateLocalizer
+  messages?: Messages
 } & TimeGridProps<TEvent, TResource>
 
 const getRange = (date: Date) => {
   const numberOfQuarter = moment(date).quarter()
   const quarterStart = moment(date)
     .quarter(numberOfQuarter)
-    .startOf('M')
+    .startOf('quarter')
     .toDate()
   const quarterEnd = moment(date)
-    .quarter(numberOfQuarter + 1 > 4 ? 1 : numberOfQuarter + 1)
-    .startOf('M')
-    .subtract(1, 'days')
-    .endOf('M')
+    .quarter(numberOfQuarter)
+    .endOf('quarter')
     .toDate()
   return [quarterStart, quarterEnd]
 }
@@ -36,7 +42,6 @@ export function QuartalView<TEvent extends object = Event, TResource extends obj
   props: Props<TEvent, TResource>
 ) {
   const { date, localizer, max, min, events, onNavigate, ...otherProps } = props
-
   const range = useMemo(() => {
     return getRange(date)
   }, [date])
@@ -55,7 +60,7 @@ export function QuartalView<TEvent extends object = Event, TResource extends obj
     return monthsArr
   }, [range])
 
-  const { formats } = reactBigCalendarAdapter({})
+  const { formats, messages } = reactBigCalendarAdapter({})
 
   return (
     <div className={cnQuartalView()}>
@@ -92,10 +97,12 @@ export function QuartalView<TEvent extends object = Event, TResource extends obj
               onNavigate={(_newDate, _view, action) => onNavigate?.(action)}
               className={cnQuartalView('Calendar')}
               views={{ month: true }}
+              messages={messages}
               localizer={localizer}
               toolbar={false}
               formats={formats}
               {...otherProps}
+              popup={false}
             />
           </div>
         )

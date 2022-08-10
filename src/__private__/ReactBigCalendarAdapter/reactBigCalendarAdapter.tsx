@@ -36,9 +36,9 @@ export const reactBigCalendarAdapter = (params: Params): Result => {
       showMore: getShowMoreMessage,
     },
     views: {
-      month: true,
-      week: true,
       day: true,
+      week: true,
+      month: true,
       agenda: QuartalView,
     },
     formats: {
