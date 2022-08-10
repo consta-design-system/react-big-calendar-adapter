@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.1 (10/08/2022)
+- [refactor(Calendar): chnage month names and quartla view (#4)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/a2dc3f7c1e1343d7a300b5115a9d09485346a06b) - [@N1MBER](https://github.com/N1MBER)
+- [chore(gh-actions): add actions (#2)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/57bcce2c3ce5cc796b54a061f78b22ea93a1d128) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.1.0 (08/07/2022)
 Сделали адаптер к календарю [react-big-calendar](https://jquense.github.io/react-big-calendar/examples/?path=/docs/about-big-calendar--page): с его помощью этот календарь можно использовать вместе с другими компонентами дизайн-системы `Consta`.
 
