@@ -1,0 +1,118 @@
+import { ReactBigCalendarAdapterDoubled } from './examples/ReactBigCalendarAdapterDoubled/ReactBigCalendarAdapterDoubled';
+import { ReactBigCalendarAdapterSliced } from './examples/ReactBigCalendarAdapterSliced/ReactBigCalendarAdapterSliced';
+
+# reactBigCalendarAdapter
+
+```tsx
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter';
+```
+
+Этот адаптер стилизует календарь [react-big-calendar](https://jquense.github.io/react-big-calendar/examples/?path=/docs/about-big-calendar--page) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Кроме стилей, адаптер добавляет в календарь перевод на русский и возможность посмотреть события за квартал.
+
+- [Границы](#границы)
+- [Разграничительные линии](#разграничительные-линии)
+- [Список свойств](#свойства)
+- [Пример использования](#пример)
+
+## Границы
+
+Чтобы сделать границы ячеек в календаре толще, добавьте флаг `doubled` в значении `true`.
+
+```tsx
+import React from 'react';
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter';
+import moment from 'moment';
+import { momentLocalizer, Calendar } from 'react-big-calendar';
+
+moment.locale('ru');
+const localizer = momentLocalizer(moment);
+
+export const ReactBigCalendarAdapterDoubled = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({ doubled: true });
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      defaultView="month"
+      {...otherProps}
+    />
+  );
+};
+```
+
+<ReactBigCalendarAdapterDoubled />
+
+## Разграничительные линии
+
+При просмотре месяца можно показать в ячейках дополнительные
+горизонтальные линии — чтобы проще было понять, к какой части дня
+относится событие. Чтобы показать разграничительные линии,
+добавьте флаг `sliced` в значении `true` (работает только при `view="month"`).
+
+```tsx
+import React from 'react';
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter';
+import moment from 'moment';
+import { momentLocalizer, Calendar } from 'react-big-calendar';
+
+moment.locale('ru');
+const localizer = momentLocalizer(moment);
+
+export const ReactBigCalendarAdapterSliced = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({ sliced: true });
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      defaultView="month"
+      {...otherProps}
+    />
+  );
+};
+```
+
+<ReactBigCalendarAdapterSliced />
+
+## Свойства адаптера
+
+| Параметры                             | Тип       | По умолчанию | Описание                                                |
+| ------------------------------------- | --------- | ------------ | ------------------------------------------------------- |
+| [`doubled?`](#границы)                | `doubled` | -            | Увеличенная толщина границ                              |
+| [`sliced?`](#разграничительные-линии) | `sliced`  | -            | Разграничительные линии внутри дня при просмотре месяца |
+| `className?`                          | `string`  | -            | Дополнительный CSS-класс                                |
+
+## Пример
+
+```tsx
+import React from 'react';
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter';
+import moment from 'moment';
+import { momentLocalizer, Calendar } from 'react-big-calendar';
+
+moment.locale('ru');
+const localizer = momentLocalizer(moment);
+
+export const ReactBigCalendarAdapterExample = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({ sliced: true });
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      showMultiDayTimes
+      defaultView="month"
+      popup
+      {...otherProps}
+    />
+  );
+};
+```
