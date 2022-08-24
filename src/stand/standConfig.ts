@@ -5,7 +5,7 @@ import image from './ConstaImage.png';
 const groups = [
   {
     title: 'Адаптеры',
-    id: 'adapter',
+    id: 'adapters',
   },
 ] as const;
 
