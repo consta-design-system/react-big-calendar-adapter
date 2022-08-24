@@ -50,7 +50,9 @@
     "Chrome >= 75"
   ],
   "peerDependencies": {
-    "@consta/uikit": ">= 3.9.3",
+    "@consta/uikit": ">= 3.9.3"
+  },
+  "dependencies": {
     "@types/react-big-calendar": "^0.38.1",
     "react-big-calendar": "^0.40.4"
   },

@@ -103,6 +103,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'no-param-reassign': 'off',
     'react/function-component-definition': 'off',
+    'react/no-unused-prop-types': 'off',
     'jsx-a11y/label-has-associated-control': [
       'error',
       {

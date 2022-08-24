@@ -5,7 +5,7 @@ import image from './ConstaImage.png';
 const groups = [
   {
     title: 'Адаптеры',
-    id: 'adapters',
+    id: 'adapter',
   },
 ] as const;
 
@@ -13,7 +13,7 @@ export const { createStand } = createConfig({
   title: 'Consta react-big-calendar-adapter',
   id: 'react-big-calendar-adapter',
   groups,
-  group: 'библиотеки компонентов',
+  group: 'Адаптеры',
   image,
   description:
     '[тут описание что это такое] Ультра топчик библиотеки с пацанскими кнопками и графиками, качай.',
