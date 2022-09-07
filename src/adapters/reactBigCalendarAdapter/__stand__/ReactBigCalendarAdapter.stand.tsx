@@ -1,8 +1,11 @@
 import { createStand } from '##/stand/standConfig';
 
+import image from './reactBigCalendarAdapter.image.svg';
+
 export default createStand({
   title: 'reactBigCalendarAdapter',
   id: 'reactBigCalendarAdapter',
+  image,
   group: 'adapters',
   description: 'Адаптер для стилизации календаря.',
   version: '0.1.1',
