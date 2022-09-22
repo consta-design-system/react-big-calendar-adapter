@@ -1,31 +1,26 @@
-import './ReactBigCalendarStories.css';
+import './ReactBigCalendarAdapterVariants.css';
 
-import { boolean } from '@storybook/addon-knobs';
+import { useBoolean } from '@consta/stand';
 import moment from 'moment';
 import React, { useMemo } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 
-import { createMetadata } from '@/__private__/storybook';
+import { cn } from '##/utils/bem';
 
-import { cn } from '../../utils/bem';
 import { backgroundEvent, events } from '../__mocks__/mock.data';
 import { reactBigCalendarAdapter } from '../reactBigCalendarAdapter';
-import mdx from './ReactBigCalendarAdapter.docs.mdx';
 
 moment.locale('ru');
 const localizer = momentLocalizer(moment);
 
-const cnReactBigCalendarStories = cn('ReactBigCalendarStories');
+const cnReactBigCalendarAdapterVarinats = cn('ReactBigCalendarAdapterVarinats');
 
-const defaultKnobs = () => ({
-  doubled: boolean('doubled', false),
-  sliced: boolean('sliced', false),
-  withBackgroundEvents: boolean('withBackgroundEvents', false),
-  withPopup: boolean('withPopup', true),
-});
+const Variants = () => {
+  const doubled = useBoolean('doubled', false);
+  const sliced = useBoolean('sliced', false);
+  const withBackgroundEvents = useBoolean('withBackgroundEvents', false);
+  const withPopup = useBoolean('withPopup', true);
 
-export const Playground = () => {
-  const { doubled, sliced, withBackgroundEvents, withPopup } = defaultKnobs();
   const { defaultDate } = useMemo(
     () => ({
       defaultDate: new Date(2022, 3, 1),
@@ -38,7 +33,7 @@ export const Playground = () => {
   });
 
   return (
-    <div className={cnReactBigCalendarStories()}>
+    <div className={cnReactBigCalendarAdapterVarinats()}>
       <Calendar
         defaultDate={defaultDate}
         events={events}
@@ -57,12 +52,4 @@ export const Playground = () => {
   );
 };
 
-export default createMetadata({
-  title: 'Utils|/ReactBigCalendarAdapter',
-  id: 'Utils/ReactBigCalendarAdapter',
-  parameters: {
-    docs: {
-      page: mdx,
-    },
-  },
-});
+export default Variants;
