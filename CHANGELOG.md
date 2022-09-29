@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.2.0 (29/09/2022)
+Самое важное:
+Выкладываем новый стенд и сборщик.
+
+Добавили песочницу: теперь в ней можно смотреть примеры компонентов.
+
+---
+
+- [chore(build): new builder and new stand (#5)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/89bd900f250cf9cd2e80f0ef42efabec67cc80d0) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.1.1 (10/08/2022)
 - [refactor(Calendar): chnage month names and quartla view (#4)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/a2dc3f7c1e1343d7a300b5115a9d09485346a06b) - [@N1MBER](https://github.com/N1MBER)
 - [chore(gh-actions): add actions (#2)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/57bcce2c3ce5cc796b54a061f78b22ea93a1d128) - [@gizeasy](https://github.com/gizeasy)
