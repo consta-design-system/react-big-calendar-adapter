@@ -1,0 +1,106 @@
+<svg
+  width="200"
+  height="120"
+  viewBox="0 0 200 120"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g clip-path="url(#clip0_2551_48285)">
+    <rect width="200" height="120" rx="3" fill="var(--color-bg-secondary)" />
+    <rect width="200" height="120" rx="4" fill="var(--color-bg-secondary)" />
+    <rect
+      x="166"
+      y="108"
+      width="131"
+      height="95"
+      rx="3.50476"
+      transform="rotate(-180 166 108)"
+      fill="var(--color-bg-default)"
+    />
+    <rect
+      x="166"
+      y="84.0952"
+      width="131"
+      height="1"
+      transform="rotate(-180 166 84.0952)"
+      fill="var(--color-bg-border)"
+      fill-opacity="0.2"
+    />
+    <rect
+      x="166"
+      y="34.0286"
+      width="131"
+      height="1"
+      transform="rotate(-180 166 34.0286)"
+      fill="var(--color-bg-border)"
+      fill-opacity="0.2"
+    />
+    <rect
+      x="166"
+      y="59"
+      width="131"
+      height="1"
+      transform="rotate(-180 166 59)"
+      fill="var(--color-bg-border)"
+      fill-opacity="0.2"
+    />
+    <rect
+      width="74"
+      height="1"
+      transform="matrix(1.9775e-08 -1 -1 -6.60289e-08 101 108)"
+      fill="var(--color-bg-border)"
+      fill-opacity="0.2"
+    />
+    <rect
+      width="74"
+      height="1"
+      transform="matrix(1.9775e-08 -1 -1 -6.60289e-08 134 108)"
+      fill="var(--color-bg-border)"
+      fill-opacity="0.2"
+    />
+    <rect
+      width="74"
+      height="1"
+      transform="matrix(1.9775e-08 -1 -1 -6.60289e-08 68 108)"
+      fill="var(--color-bg-border)"
+      fill-opacity="0.2"
+    />
+    <rect
+      x="37"
+      y="36"
+      width="28"
+      height="4"
+      rx="2"
+      fill="var(--color-bg-link)"
+    />
+    <rect
+      x="103"
+      y="61"
+      width="28"
+      height="4"
+      rx="2"
+      fill="var(--color-bg-link)"
+    />
+    <rect
+      x="70"
+      y="69"
+      width="61"
+      height="4"
+      rx="2"
+      fill="var(--color-bg-link)"
+    />
+    <rect
+      x="136"
+      y="86"
+      width="28"
+      height="4"
+      rx="2"
+      fill="var(--color-bg-link)"
+    />
+  </g>
+  <defs>
+    <clipPath id="clip0_2551_48285">
+      <rect width="200" height="120" rx="3" fill="var(--color-bg-default)" />
+    </clipPath>
+  </defs>
+</svg>

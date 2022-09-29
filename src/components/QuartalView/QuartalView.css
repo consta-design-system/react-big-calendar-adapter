@@ -1,0 +1,51 @@
+.QuartalView {
+  width: 100%;
+
+  &-WeekDays {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    border: var(--calendar-border-width) solid var(--color-bg-border);
+    border-bottom-width: calc(var(--calendar-border-width) * 2);
+
+    & > *:not(:last-child) {
+      border-right: var(--calendar-border-width) solid var(--color-bg-border);
+    }
+  }
+
+  &-Day {
+    flex: 1;
+  }
+
+  &-Month {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &-Label {
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--space-xl);
+    padding-left: var(--space-xs);
+    background: var(--color-bg-secondary);
+    border-left: var(--calendar-border-width) solid var(--color-bg-border);
+    border-right: var(--calendar-border-width) solid var(--color-bg-border);
+    text-transform: capitalize;
+  }
+
+  &-Calendar {
+    width: 100%;
+    border-top: var(--calendar-border-width) solid var(--color-bg-border);
+
+    & .rbc-month-header.rbc-row {
+      display: none;
+    }
+
+    /* & .rbc-date-cell   */
+  }
+}
