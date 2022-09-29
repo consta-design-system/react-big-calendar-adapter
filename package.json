@@ -1,6 +1,6 @@
 {
   "name": "@consta/react-big-calendar-adapter",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "scripts": {
     "postinstall": "husky install",
     "tsc-dry-run": "tsc --noEmit",
