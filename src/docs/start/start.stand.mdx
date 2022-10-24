@@ -1,0 +1,38 @@
+## Установите пакет и зависимости
+
+`yarn add @consta/uikit @consta/react-big-calendar-adapter`
+
+или
+
+`npm install @consta/uikit @consta/react-big-calendar-adapter`
+
+## Подключите тему
+
+Тему обязательно нужно подключать в корне приложения, так, чтобы все компоненты были вложены в [компонент `Theme`](##LIBS.LIB.STAND/lib:uikit/stand:components-theme-stable).
+
+#### Создайте стилизованный календарь
+
+Подключите адаптер [reactBigCalendarAdapter](##LIBS.LIB.STAND/lib:react-big-calendar-adapter/stand:adapters-reactbigcalendaradapter-stable) к календарю, чтобы добавить стили для некоторых свойств. Например, так:
+
+```js
+import React from 'react';
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter';
+import moment from 'moment';
+import { momentLocalizer, Calendar } from 'react-big-calendar';
+moment.locale('ru');
+const localizer = momentLocalizer(moment);
+export const ReactBigCalendarAdapter = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({});
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      defaultView="month"
+      {...otherProps}
+    />
+  );
+};
+```

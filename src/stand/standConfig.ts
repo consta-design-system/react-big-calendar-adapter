@@ -4,8 +4,14 @@ import image from './ConstaImage.png';
 
 const groups = [
   {
+    title: 'Документация',
+    id: 'docs',
+    initialOpen: true,
+  },
+  {
     title: 'Адаптеры',
     id: 'adapters',
+    initialOpen: true,
   },
 ] as const;
 

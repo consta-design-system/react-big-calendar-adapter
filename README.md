@@ -1,63 +1,86 @@
-# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | Библиотека интерфейсных компонентов
+reactBigCalendarAdapter | [Дизайн-система Consta](https://consta.design/)
 
-Consta — дизайн-система для разработки интерфейсов, написана на [React](https://reactjs.org/), сделана и поддерживается в «Газпром нефти».
-
-В дизайн-систему входит несколько библиотек. **Здесь — библиотека интерфейсных компонентов:** простые контролы, сложные блоки, темы и хуки. Все библиотеки представлены в виде компонентов и макетов в Figma.
-
-## Что входит в дизайн-систему
-
-### Библиотека компонентов
-
-[Репозиторий](https://github.com/consta-design-system/uikit) | [NPM](https://www.npmjs.com/package/@consta/uikit) | [Документация и стенд](http://uikit.gizeasy.ru/?path=/story/common-about--page) | [Макеты](https://www.figma.com/community/file/853774806786762374)
-
-### Библиотека графиков
-
-[Репозиторий](https://github.com/consta-design-system/charts) | [NPM](https://www.npmjs.com/package/@consta/charts) | [Документация и стенд](http://charts.gizeasy.ru) | [Макеты](https://www.figma.com/community/file/982611119114314434)
-
-[>> Посмотреть все библиотеки](http://uikit.gizeasy.ru/?path=/docs/common-about-github--page)
-
-<hr>
-
-Подробности — на [на сайте дизайн-системы Consta](http://consta.gazprom-neft.ru/)
-
-Следите за новостями и релизами в [телеграм-канале дизайн-системы](https://t.me/consta_ui_releases)
+Этот адаптер стилизует таблицу [react-big-calendar]((http://jquense.github.io/react-big-calendar/examples/index.html?path=/story/about-big-calendar--page) для [дизайн-системы Consta](https://consta.design/).
 
 # Как использовать
 
 ## Установите пакет
 
+```sh
+# NPM
+$ npm install @consta/react-big-calendar-adapter
+# Yarn
+$ yarn add @consta/react-big-calendar-adapter
 ```
-yarn add @consta/uikit
-```
 
-## Начните работу с библиотекой
+## Подключите зависимости
 
-Чтобы начать работу с библиотекой интерфейсных компонентов, подключите тему:
+Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.consta.design/libs/uikit/theme-themeabout).
 
-```tsx
+### Можно использовать компоненты
+
+Например, так:
+
+```js
 import React from 'react';
-import { Theme, presetGpnDefault } from '@consta/uikit/Theme';
-import { Button } from '@consta/uikit/Button';
-
-const App = () => (
-  <Theme preset={presetGpnDefault}>
-    <Button label="Кнопка" />
-  </Theme>
-);
+import { reactBigCalendarAdapter } from '@consta/react-big-calendar/reactBigCalendarAdapter';
+import moment from 'moment';
+import { momentLocalizer, Calendar } from 'react-big-calendar';
+moment.locale('ru');
+const localizer = momentLocalizer(moment);
+export const ReactBigCalendarAdapter = () => {
+  const { prefix, ...otherProps } = reactBigCalendarAdapter({});
+  return (
+    <Calendar
+      defaultDate={new Date(2022, 3, 1)}
+      events={events}
+      localizer={localizer}
+      showMultiDayTimes
+      className={prefix}
+      defaultView="month"
+      {...otherProps}
+    />
+  );
+};
 ```
 
-[Что такое темы и как с ними работать](http://uikit.gizeasy.ru/?path=/docs/thematization-what-are-themes--page)
+## Разработка
 
-## Документация и стенд
+### Подготовка окружения
 
-На стенде можно менять параметры и смотреть, как меняются компоненты. Документация — во вкладке у каждого компонента.
+Рабочее окружение должно содержать NodeJS и Yarn, необходимые версии можно узнать в файле [package.json](./package.json) в блоке **engines**.
 
-[Вперёд, к стенду](http://uikit.gizeasy.ru/)
+Чтобы установить зависимости, выполните команду:
+
+```sh
+$ yarn install
+```
+
+### Основные команды
+
+```sh
+# Сборка и старт Storybook
+$ yarn start
+# Сборка для production
+$ yarn build
+# Линтинг всех файлов
+$ yarn lint
+# Форматирование всех файлов prettier
+$ yarn format
+# Запуск юнит-тестов
+$ yarn unit
+# Запуск юнит-тестов, тестирование TS, линтинг файлов
+$ yarn test
+```
+
+## Документация
+
+[Посмотреть документацию и примеры](http://react-big-calendar-adapter.consta.design/)
 
 ## Контрибьюторам
 
-Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.gizeasy.ru/?path=/docs/common-develop-contributors--page).
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.consta.design/libs/uikit/custom-contribute).
 
 ## Лицензия
 
-Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на условиях открытой [лицензии MIT](https://consta.gazprom-neft.ru/static/licence_mit.pdf).
+Дизайн-систему можно использовать бесплатно, она распространяется на условиях открытой [лицензии MIT](https://consta.design/static/licence_mit.pdf).
