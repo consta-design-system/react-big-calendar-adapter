@@ -15,7 +15,7 @@ $ yarn add @consta/react-big-calendar-adapter
 
 ## Подключите зависимости
 
-Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.consta.design/libs/uikit/theme-themeabout).
+Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://portal.consta.design/portal/uikit/theme-themeabout).
 
 ### Можно использовать компоненты
 
@@ -59,16 +59,21 @@ $ yarn install
 ### Основные команды
 
 ```sh
-# Сборка и старт Storybook
+# Сборка и старт
 $ yarn start
+
 # Сборка для production
 $ yarn build
+
 # Линтинг всех файлов
 $ yarn lint
+
 # Форматирование всех файлов prettier
 $ yarn format
+
 # Запуск юнит-тестов
 $ yarn unit
+
 # Запуск юнит-тестов, тестирование TS, линтинг файлов
 $ yarn test
 ```
@@ -79,7 +84,7 @@ $ yarn test
 
 ## Контрибьюторам
 
-Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.consta.design/libs/uikit/custom-contribute).
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://portal.consta.design/libs/portal/custom-contribute).
 
 ## Лицензия
 
