@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.2.1 (24/11/2022)
+- [fix(reactBigCalendarAdapter): fix z-index for overlay (#13)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/f9b734cbf71941544fddd370a50f9c0498ae7bbe) - [@N1MBER](https://github.com/N1MBER)
+- [docs(portal): readme, version, stand (#12)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/bd239602624c88979996538bf52f923b56537c75) - [@arhayka](https://github.com/arhayka)
+- [docs: readme, menu, links, start (#11)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/8184305123faecf667d7254b75792fc089e5819c) - [@arhayka](https://github.com/arhayka)
+- [chore(deps): update @consta/stand](https://github.com/consta-design-system/react-big-calendar-adapter/commit/25b4f0b7fd93105791ff578baada49eccbbac260) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.2.0 (29/09/2022)
 Самое важное:
 Выкладываем новый стенд и сборщик.
