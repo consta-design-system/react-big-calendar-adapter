@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.2 (30/11/2022)
+- [fix(prefix): add prefix for class names (#14)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/065e14412ac355ce5daa381fcffd6fd5f6fd539e) - [@N1MBER](https://github.com/N1MBER)
+
+--------------------
+
 ## v0.2.1 (24/11/2022)
 - [fix(reactBigCalendarAdapter): fix z-index for overlay (#13)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/f9b734cbf71941544fddd370a50f9c0498ae7bbe) - [@N1MBER](https://github.com/N1MBER)
 - [docs(portal): readme, version, stand (#12)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/bd239602624c88979996538bf52f923b56537c75) - [@arhayka](https://github.com/arhayka)
