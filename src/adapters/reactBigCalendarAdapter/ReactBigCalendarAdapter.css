@@ -1,4 +1,4 @@
-.ReactBigCalendarAdapter {
+.rbca--ReactBigCalendarAdapter {
   --big-calendar-active-color: rgba(0, 113, 178, 0.15);
   --month-column-size: calc(100% / 7);
   --calendar-border-width: calc(var(--space-3xs) / 2);
