@@ -137,5 +137,5 @@ QuartalView.navigate = (
 };
 
 QuartalView.title = (date: Date) => {
-  return `${moment(date).quarter()} квартал`;
+  return `${moment(date).quarter()} квартал ${moment(date).year()}`;
 };
