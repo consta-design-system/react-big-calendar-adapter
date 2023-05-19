@@ -74,9 +74,6 @@ $ yarn stand:build
 
 # Запуск тестов
 $ yarn test
-
-# Преобразование иконок в компонеты
-$ yarn icon-generate
 ```
 
 ## Контрибьюторам
