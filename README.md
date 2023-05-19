@@ -1,6 +1,6 @@
 reactBigCalendarAdapter | [Дизайн-система Consta](https://consta.design/)
 
-Этот адаптер стилизует таблицу [react-big-calendar]((http://jquense.github.io/react-big-calendar/examples/index.html?path=/story/about-big-calendar--page) для [дизайн-системы Consta](https://consta.design/).
+Этот адаптер стилизует таблицу [react-big-calendar](http://jquense.github.io/react-big-calendar/examples/index.html?path=/story/about-big-calendar--page) для [дизайн-системы Consta](https://consta.design/).
 
 # Как использовать
 
@@ -15,7 +15,7 @@ $ yarn add @consta/react-big-calendar-adapter
 
 ## Подключите зависимости
 
-Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://portal.consta.design/portal/uikit/theme-themeabout).
+Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](https://consta.design/libs/portal/theme-themeabout).
 
 ### Можно использовать компоненты
 
@@ -44,11 +44,15 @@ export const ReactBigCalendarAdapter = () => {
 };
 ```
 
+## Документация
+
+[Посмотреть документацию и примеры](http://consta.design/libs/react-big-calendar-adapter)
+
 ## Разработка
 
 ### Подготовка окружения
 
-Рабочее окружение должно содержать NodeJS и Yarn, необходимые версии можно узнать в файле [package.json](./package.json) в блоке **engines**.
+Рабочее окружение должно содержать NodeJS и Yarn.
 
 Чтобы установить зависимости, выполните команду:
 
@@ -59,28 +63,25 @@ $ yarn install
 ### Основные команды
 
 ```sh
-# Сборка и старт
+# Запуск локального сервера для разработки
 $ yarn start
 
-# Сборка для production
+# Сборка пакета
 $ yarn build
 
-# Линтинг всех файлов
-$ yarn lint
+# Сборка стенда
+$ yarn stand:build
 
-# Форматирование всех файлов prettier
-$ yarn format
-
-# Запуск юнит-тестов
-$ yarn unit
-
-# Запуск юнит-тестов, тестирование TS, линтинг файлов
+# Запуск тестов
 $ yarn test
+
+# Преобразование иконок в компонеты
+$ yarn icon-generate
 ```
 
-## Документация
+## Контрибьюторам
 
-[Посмотреть документацию и примеры](http://react-big-calendar-adapter.consta.design/)
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](https://consta.design/libs/portal/contributers-code).
 
 ## Контрибьюторам
 
