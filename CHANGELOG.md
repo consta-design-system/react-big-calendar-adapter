@@ -1,5 +1,19 @@
 # Changelog
 
+## v0.2.3 (23/05/2023)
+Самое важное:
+- Запускать сервер разработки и собирать пакеты на ОС Windows теперь можно во всех библиотеках Consta.
+- Добавили год в заголовок календаря при квартальном отображении.
+
+---
+
+- [chore: configure build for windows (#17)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/5b5efc02ebb1efe454caf937236eca4ac97c85a2) - [@gizeasy](https://github.com/gizeasy)
+- [feat(QuartalView): add year to title (#16)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/d6b9b5903ffe543c6a3fb2ec0412e5031ad477d5) - [@N1MBER](https://github.com/N1MBER)
+- [docs(ReactBigCalendarAdapter): add aliases (#15)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/a7a2eb24bde23ad902bccafab7febfc182c383f5) - [@N1MBER](https://github.com/N1MBER)
+- [chore: update @consta/stand](https://github.com/consta-design-system/react-big-calendar-adapter/commit/cf9c65223c5978e22ef88867f9a8c2548e23f00f) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.2.2 (30/11/2022)
 - [fix(prefix): add prefix for class names (#14)](https://github.com/consta-design-system/react-big-calendar-adapter/commit/065e14412ac355ce5daa381fcffd6fd5f6fd539e) - [@N1MBER](https://github.com/N1MBER)
 
