@@ -26,5 +26,5 @@ export const { createStand } = createConfig({
   repositoryUrl:
     'https://github.com/consta-design-system/react-big-calendar-adapter',
   figmaUrl:
-    'https://www.figma.com/file/LKYyjgQ3khFHvXraZAG1n1?embed_host=share&kind=&node-id=1336%3A68963&viewer=1',
+    'https://www.figma.com/file/3RsiLTgTuXpdnqG7gW8UwL/Consta-Components-(Community)?type=design&node-id=1336-68963&t=ponDmJar7RUOypIn-0',
 });
