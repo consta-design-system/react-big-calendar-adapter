@@ -25,4 +25,6 @@ export const { createStand } = createConfig({
     'Адаптер для календаря из библиотеки react-big-calendar. Стилизует календарь для дизайн-системы Consta.',
   repositoryUrl:
     'https://github.com/consta-design-system/react-big-calendar-adapter',
+  figmaUrl:
+    'https://www.figma.com/file/3RsiLTgTuXpdnqG7gW8UwL/Consta-Components-(Community)?type=design&node-id=1336-68963&t=ponDmJar7RUOypIn-0',
 });
